@@ -13,6 +13,8 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/motion/nuxt',
     'nuxt-aos',
+    "@nuxt/image",
+    '@pinia/nuxt',
   ],
   aos: {
     // Global settings:

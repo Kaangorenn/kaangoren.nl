@@ -1,10 +1,16 @@
 <template>
+    <div class="grain" id="grain"></div>
+
     <div class="antialiased">
         <Navbar />
-        <slot />
+        <div class="dark:bg-black bg-white">
+            <slot />
+        </div>
         <!-- <Footer /> -->
     </div>
 </template>
+<script setup>
+</script>
 <style>
 html {
     scroll-behavior: smooth !important;
@@ -12,6 +18,44 @@ html {
 
 body {
     font-family: 'UniversTE20-Light', sans-serif;
+}
+
+#grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0.2;
+    animation: grain 0.3s steps(1) infinite;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://assets.codepen.io/14179/noise-256w.png");
+}
+
+
+@keyframes grain {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    20% {
+        background-position: 50% 50%;
+    }
+
+    40% {
+        background-position: 25% 25%;
+    }
+
+    60% {
+        background-position: 75% 75%;
+    }
+
+    80% {
+        background-position: 0% 100%;
+    }
 }
 
 /* cyrillic-ext */
