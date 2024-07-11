@@ -6,8 +6,39 @@ export const useMainStore = defineStore('main', {
             isHovered: false,
             darkmode: null,
             isLoading: false,
-        }
-    },
+
+            language: 'en', // Default language
+            texts: {
+                en: {
+                    navbar: {
+                        home: "home",
+                        about: "about",
+                        portfolio: "portfolio",
+                        contact: "contact",
+                    },
+                    home: {
+                        darkmode_button: "toggle darkmode",
+                        job_title: "software developer",
+                    },
+                },
+                nl: {
+                    navbar: {
+                        home: "home",
+                        about: "over mij",
+                        portfolio: "portfolio",
+                        contact: "contact",
+                    },
+                    home: {
+                        darkmode_button: "donkere modus schakelen",
+                        job_title: "software ontwikkelaar",
+                    },
+                },
+                tr: {
+                    greeting: "Merhaba",
+                    },
+                },
+            }
+        },
     actions: {
         toggleHover(value) {
             this.isHovered = value;
@@ -19,6 +50,14 @@ export const useMainStore = defineStore('main', {
             } else {
                 document.documentElement.classList.remove('dark'); // Disable Tailwind dark mode
             }
+        },
+        changeLanguage(lang) {
+            this.language = lang;
+        },
+
+        setLanguage() {
+            // Set the language of the website
+            document.documentElement.lang = this.language;
         },
     },
     getters: {

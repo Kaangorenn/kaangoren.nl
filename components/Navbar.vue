@@ -7,10 +7,15 @@ const mainStore = useMainStore();
     <div data-aos="fade-down">
         <div :class="{ 'text-black bg-black/5': mainStore.isHovered }" class="h-24 w-screen bg-black/5 dark:bg-white/5 backdrop-blur-lg fixed text-black dark:text-white z-50">
             <div class="grid place-items-center grid-cols-4 h-full w-full">
-                <NuxtLink to="#home" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 ease-in-out duration-300">home</NuxtLink>
+                <!-- <NuxtLink to="#home" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 ease-in-out duration-300">home</NuxtLink> -->
                 <NuxtLink to="#about_me" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 ease-in-out duration-300">about me</NuxtLink>
                 <NuxtLink to="#portfolio" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 ease-in-out duration-300">portfolio</NuxtLink>
                 <NuxtLink to="#contact" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 ease-in-out duration-300">contact</NuxtLink>
+                <select @change="changeLanguage($event.target.value)" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 ease-in-out duration-300">
+                    <option value="en">🇬🇧󠁧󠁢󠁥 english</option>
+                    <option value="nl">🇳🇱 dutch</option>
+                    <option value="tr">🇹🇷 turkish</option>
+                </select>
             </div>
         </div>
     </div>
@@ -20,3 +25,6 @@ const mainStore = useMainStore();
         </div>
     </div>
 </template>
+<script>
+
+</script>
