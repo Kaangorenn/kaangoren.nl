@@ -1,12 +1,12 @@
 <template>
-    <div class="grain" id="grain"></div>
+    <div class="noise"></div>
     <!-- <div class="absolute z-0 inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div> -->
     <div class="antialiased">
         <Navbar />
         <div class="dark:bg-black bg-white">
             <slot />
         </div>
-        <!-- <Footer /> -->
+        <Footer />
     </div>
 </template>
 <script setup>
@@ -20,41 +20,108 @@ body {
     font-family: 'UniversTE20-Light', sans-serif;
 }
 
-#grain {
+.noise {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    pointer-events: none;
-    opacity: 0.2;
-    animation: grain 0.3s steps(1) infinite;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("https://assets.codepen.io/14179/noise-256w.png");
+    z-index: 9999;
+    top: -300%;
+    left: -150%;
+    height: 600%;
+    width: 600%;
+    -webkit-animation: grain 7s steps(10) infinite;
+    animation: grain 7s steps(10) infinite;
+    background-image: url(/noise.png);
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: .20;
+    pointer-events: none
 }
 
+
+@-webkit-keyframes grain {
+
+    0%,
+    to {
+        transform: translate(0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
+    }
+
+    20% {
+        transform: translate(-15%, 5%)
+    }
+
+    30% {
+        transform: translate(7%, -25%)
+    }
+
+    40% {
+        transform: translate(-5%, 25%)
+    }
+
+    50% {
+        transform: translate(-15%, 10%)
+    }
+
+    60% {
+        transform: translate(15%)
+    }
+
+    70% {
+        transform: translateY(15%)
+    }
+
+    80% {
+        transform: translate(3%, 35%)
+    }
+
+    90% {
+        transform: translate(-10%, 10%)
+    }
+}
 
 @keyframes grain {
 
     0%,
-    100% {
-        background-position: 0 0;
+    to {
+        transform: translate(0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
     }
 
     20% {
-        background-position: 50% 50%;
+        transform: translate(-15%, 5%)
+    }
+
+    30% {
+        transform: translate(7%, -25%)
     }
 
     40% {
-        background-position: 25% 25%;
+        transform: translate(-5%, 25%)
+    }
+
+    50% {
+        transform: translate(-15%, 10%)
     }
 
     60% {
-        background-position: 75% 75%;
+        transform: translate(15%)
+    }
+
+    70% {
+        transform: translateY(15%)
     }
 
     80% {
-        background-position: 0% 100%;
+        transform: translate(3%, 35%)
+    }
+
+    90% {
+        transform: translate(-10%, 10%)
     }
 }
 
