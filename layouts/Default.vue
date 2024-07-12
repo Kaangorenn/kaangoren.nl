@@ -2,6 +2,7 @@
     <div class="noise"></div>
     <!-- <div class="absolute z-0 inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div> -->
     <div class="antialiased">
+        <!-- <Preferences /> -->
         <Navbar />
         <div class="dark:bg-black bg-white">
             <slot />
@@ -14,114 +15,75 @@
 <style>
 html {
     scroll-behavior: smooth !important;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'UniversTE20-Light', sans-serif;
+    overflow-x: hidden;
 }
 
 .noise {
     position: fixed;
-    z-index: 9999;
-    top: -300%;
-    left: -150%;
-    height: 600%;
-    width: 600%;
-    -webkit-animation: grain 7s steps(10) infinite;
-    animation: grain 7s steps(10) infinite;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
     background-image: url(/noise.png);
-    background-size: 200px;
     background-repeat: repeat;
+    animation: grain .2s infinite;
     opacity: .20;
-    pointer-events: none
-}
-
-
-@-webkit-keyframes grain {
-
-    0%,
-    to {
-        transform: translate(0)
-    }
-
-    10% {
-        transform: translate(-5%, -10%)
-    }
-
-    20% {
-        transform: translate(-15%, 5%)
-    }
-
-    30% {
-        transform: translate(7%, -25%)
-    }
-
-    40% {
-        transform: translate(-5%, 25%)
-    }
-
-    50% {
-        transform: translate(-15%, 10%)
-    }
-
-    60% {
-        transform: translate(15%)
-    }
-
-    70% {
-        transform: translateY(15%)
-    }
-
-    80% {
-        transform: translate(3%, 35%)
-    }
-
-    90% {
-        transform: translate(-10%, 10%)
-    }
+    visibility: visible;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 @keyframes grain {
 
-    0%,
-    to {
-        transform: translate(0)
+    0% {
+        transform: translate(0, 0)
     }
 
     10% {
-        transform: translate(-5%, -10%)
+        transform: translate(-5%, -5%)
     }
 
     20% {
-        transform: translate(-15%, 5%)
+        transform: translate(-10%, 5%)
     }
 
     30% {
-        transform: translate(7%, -25%)
+        transform: translate(5%, -10%)
     }
 
     40% {
-        transform: translate(-5%, 25%)
+        transform: translate(-5%, 15%)
     }
 
     50% {
-        transform: translate(-15%, 10%)
+        transform: translate(-10%, 5%)
     }
 
     60% {
-        transform: translate(15%)
+        transform: translate(15%, 0)
     }
 
     70% {
-        transform: translateY(15%)
+        transform: translate(0, 10%)
     }
 
     80% {
-        transform: translate(3%, 35%)
+        transform: translate(-15%, 0)
     }
 
     90% {
-        transform: translate(-10%, 10%)
+        transform: translate(10%, 5%)
+    }
+
+    100% {
+        transform: translate(5%, 0)
     }
 }
 

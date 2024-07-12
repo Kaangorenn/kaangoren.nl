@@ -15,9 +15,10 @@ const about_description = mainStore.texts[mainStore.language].about.about.descri
 const technologies_title = mainStore.texts[mainStore.language].about.technologies.title;
 const technologies_description = mainStore.texts[mainStore.language].about.technologies.description;
 const technologies_list = mainStore.texts[mainStore.language].about.technologies.list;
+
 </script>
 <template>
-    <section id="home" :class="{ 'bg-zinc-100': mainStore.isHovered }" class="h-screen w-screen bg-white dark:bg-black transition-colors duration-300 ease-in-out grid place-items-center text-white z-10">
+    <section id="home" :class="{ 'bg-orange-600': mainStore.isHovered }" class="min-h-screen w-screen bg-white dark:bg-black transition-colors duration-300 ease-in-out grid place-items-center text-white z-10">
         <div>
             <div class="grid place-items-center">
                 <div data-aos="fade-down" data-aos-delay="700" class="rounded-full overflow-hidden h-56 w-56 my-5">
@@ -32,7 +33,7 @@ const technologies_list = mainStore.texts[mainStore.language].about.technologies
             </div>
         </div>
     </section>
-    <section id="portfolio" class="h-screen w-screen grid place-items-center text-white">
+    <section id="portfolio" class="min-h-screen w-screen grid place-items-center text-white">
         <div class="grid grid-cols-1 lg:grid-cols-2 h-full w-full gap-10">
             <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-r-lg">
                 <div class="grid place-items-center h-full w-full">

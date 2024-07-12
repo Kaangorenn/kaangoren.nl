@@ -50,16 +50,9 @@ const toggleDarkMode = () => {
             </div>
         </div>
     </div>
+    <div data-aos="fade-up" class="fixed bottom-5 right-5 rounded-full p-2 backdrop-blur-lg bg-black/5 dark:bg-white/5 hover:bg-black/10 hover:dark:bg-white/10 transition-colors duration-300">
+        <NuxtLink to="#home">
+            <NuxtImg src="/icons/arrow.svg" class="h-10 w-10 dark:invert"></NuxtImg>
+        </NuxtLink>
+    </div>
 </template>
-<script>
-export default {
-    data() {
-        return {
-
-        };
-    },
-    methods: {
-
-    },
-};
-</script>

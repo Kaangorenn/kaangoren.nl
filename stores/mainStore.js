@@ -3,12 +3,20 @@ import { defineStore } from "pinia";
 export const useMainStore = defineStore('main', {
     state: () => {
         return {
+            site_settings: {
+                selected_language: "en",
+                darkmode: false,
+            },
             isHovered: false,
             darkMode: false,
             isLoading: false,
             language: "en",
             texts: {
                 en: {
+                    site_settings: {
+                        darkmode: "darkmode",
+                        lightmode: "lightmode",
+                    },
                     navbar: {
                         home: "home",
                         about: "about",
@@ -138,7 +146,6 @@ export const useMainStore = defineStore('main', {
             document.body.classList.remove('dark');
         }
         },
-        
         setLanguage(lang) {
             this.language = lang;
         }
