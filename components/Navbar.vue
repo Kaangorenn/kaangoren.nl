@@ -50,9 +50,51 @@ const toggleDarkMode = () => {
             </div>
         </div>
     </div>
-    <div data-aos="fade-up" class="fixed bottom-5 right-5 rounded-full p-2 backdrop-blur-lg bg-black/5 dark:bg-white/5 hover:bg-black/10 hover:dark:bg-white/10 transition-colors duration-300">
-        <NuxtLink to="#home">
+    <div data-aos="fade-up" class="fixed bottom-[96px] right-5 rounded-full p-2 backdrop-blur-lg bg-black/5 dark:bg-white/5 hover:bg-black/10 hover:dark:bg-white/10 transition-colors duration-300">
+        <NuxtLink @click.prevent="scrollToPreviousSection">
             <NuxtImg src="/icons/arrow.svg" class="h-10 w-10 dark:invert"></NuxtImg>
         </NuxtLink>
     </div>
+    <div data-aos="fade-down" class="fixed bottom-5 right-5 rounded-full p-2 backdrop-blur-lg bg-black/5 dark:bg-white/5 hover:bg-black/10 hover:dark:bg-white/10 transition-colors duration-300">
+        <NuxtLink @click.prevent="scrollToNextSection">
+            <NuxtImg src="/icons/arrow.svg" class="h-10 w-10 dark:invert rotate-180"></NuxtImg>
+        </NuxtLink>
+    </div>
 </template>
+<script>
+export default {
+    methods: {
+        scrollToPreviousSection() {
+            // Scrolls up by the height of the viewport
+            window.scrollBy({
+                top: -window.innerHeight, // Negative value to scroll up
+                behavior: 'smooth'
+            });
+        },
+        scrollToNextSection() {
+            // Scroll down by the height of the viewport
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        },
+        scrollToPreviousSection() {
+            // Check if the user is at the bottom of the page
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                // User is at the bottom, scroll to the top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                // If not at the bottom, handle the regular previous section scrolling
+                // For example, scroll up by the height of the viewport or to a specific section
+                window.scrollBy({
+                    top: -window.innerHeight, // Adjust this value as needed
+                    behavior: 'smooth'
+                });
+            }
+        }
+    },
+}
+</script>

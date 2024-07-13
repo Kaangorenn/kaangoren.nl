@@ -25,35 +25,35 @@ const toggleDarkMode = () => {
         <div class="h-full w-full grid grid-cols-1 lg:grid-cols-3 place-items-center dark:text-white text-black">
             <div class="h-full w-full">
                 <div class="p-10 text-xl md:text-2xl">
-                    <NuxtLink to="#home" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">home</NuxtLink>
+                    <NuxtLink to="#home" class="hover:underline ease-in-out duration-300">home</NuxtLink>
                     <br>
-                    <NuxtLink to="#about_me" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">about</NuxtLink>
+                    <NuxtLink to="#about_me" class="hover:underline ease-in-out duration-300">about</NuxtLink>
                     <br>
-                    <NuxtLink to="#portfolio" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">portfolio</NuxtLink>
+                    <NuxtLink to="#portfolio" class="hover:underline ease-in-out duration-300">portfolio</NuxtLink>
                     <br>
-                    <NuxtLink to="#contact" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">contact</NuxtLink>
+                    <NuxtLink to="#contact" class="hover:underline ease-in-out duration-300">contact</NuxtLink>
                 </div>
             </div>
             <div class="bg-blue-200 h-full w-full">
                 <div class="p-10 text-xl md:text-2xl">
-                    <NuxtLink to="#home" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">home</NuxtLink>
+                    <NuxtLink to="#home" class="hover:underline ease-in-out duration-300">home</NuxtLink>
                     <br>
-                    <NuxtLink to="#about_me" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">about</NuxtLink>
+                    <NuxtLink to="#about_me" class="hover:underline ease-in-out duration-300">about</NuxtLink>
                     <br>
-                    <NuxtLink to="#portfolio" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">portfolio</NuxtLink>
+                    <NuxtLink to="#portfolio" class="hover:underline ease-in-out duration-300">portfolio</NuxtLink>
                     <br>
-                    <NuxtLink to="#contact" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">contact</NuxtLink>
+                    <NuxtLink to="#contact" class="hover:underline ease-in-out duration-300">contact</NuxtLink>
                 </div>
             </div>
             <div class="bg-green-200 h-full w-full">
                 <div class="p-10 text-xl md:text-2xl">
-                    <NuxtLink @click="toggleDarkMode" to="#about_me" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">toggle darkmode</NuxtLink>
+                    <NuxtLink @click="toggleDarkMode" to="#about_me" class="hover:underline ease-in-out duration-300">toggle darkmode</NuxtLink>
                     <br>
-                    <NuxtLink to="#about_me" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">about</NuxtLink>
+                    <NuxtLink to="#about_me" class="hover:underline ease-in-out duration-300">about</NuxtLink>
                     <br>
-                    <NuxtLink to="#portfolio" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">portfolio</NuxtLink>
+                    <NuxtLink to="#portfolio" class="hover:underline ease-in-out duration-300">portfolio</NuxtLink>
                     <br>
-                    <NuxtLink to="#contact" class="hover:text-black/60 dark:hover:text-white/60 hover:underline ease-in-out duration-300">contact</NuxtLink>
+                    <NuxtLink to="#contact" class="hover:underline ease-in-out duration-300">contact</NuxtLink>
                 </div>
             </div>
         </div>

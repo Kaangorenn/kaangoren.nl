@@ -33,43 +33,91 @@ const technologies_list = mainStore.texts[mainStore.language].about.technologies
             </div>
         </div>
     </section>
-    <section id="portfolio" class="min-h-screen w-screen grid place-items-center text-white">
+    <section id="about_me" class="min-h-screen w-screen grid place-items-center text-white bg-white dark:bg-black transition-colors duration-300">
         <div class="grid grid-cols-1 lg:grid-cols-2 h-full w-full gap-10">
-            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-r-lg">
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-r-lg transition-colors duration-300">
                 <div class="grid place-items-center h-full w-full">
                     <div class=" text-center">
-                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1000" class="text-6xl text-black dark:text-white">{{ technologies_title }}</h1>
+                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ technologies_title }}</h1>
                         <br>
-                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1500" class="text-lg text-black dark:text-white">{{ technologies_description }}</p>
-                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1500" class="text-lg text-black dark:text-white ">{{ technologies_list }}</p>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ technologies_description }}</p>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white ">{{ technologies_list }}</p>
                     </div>
                     <div class=" text-center">
-                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1000" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
+                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
                         <br>
-                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1500" class="text-lg text-black dark:text-white">{{ about_description }}</p>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ about_description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-l-lg">
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-l-lg transition-colors duration-300">
                 <div class="grid place-items-center h-full w-full">
                     <div class="text-center">
-                        <h1 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1000" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
+                        <h1 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
                         <br>
-                        <p data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1500" class="text-lg text-black dark:text-white">{{ about_description }}</p>
+                        <p data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ about_description }}</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-    <section id="portfolio" class="h-screen w-screen bg-black grid place-items-center text-white">
-        <div class="bg-white/10 backdrop-blur-md rounded-lg drop-shadow-lg p-8 shadow-white">
-            <h1 class="text-6xl font-semibold underline">porftolio</h1>
+    <br>
+    <section id="portfolio" class="min-h-screen w-screen grid place-items-center text-white bg-white dark:bg-black transition-colors duration-300">
+        <div class="grid grid-cols-1 lg:grid-cols-2 h-full w-full gap-10">
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-r-lg transition-colors duration-300">
+                <div class="grid place-items-center h-full w-full">
+                    <div class=" text-center">
+                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ technologies_title }}</h1>
+                        <br>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ technologies_description }}</p>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white ">{{ technologies_list }}</p>
+                    </div>
+                    <div class=" text-center">
+                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
+                        <br>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ about_description }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-l-lg transition-colors duration-300">
+                <div class="grid place-items-center h-full w-full">
+                    <div class="text-center">
+                        <h1 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
+                        <br>
+                        <p data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ about_description }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="contact" class="h-screen w-screen bg-black grid place-items-center text-white">
-        <div class="bg-white/10 backdrop-blur-md rounded-lg drop-shadow-lg p-8 shadow-white">
-            <h1 class="text-6xl font-semibold underline">contact</h1>
+    <br>
+    <section id="contact" class="min-h-screen w-screen grid place-items-center text-white bg-white dark:bg-black transition-colors duration-300">
+        <div class="grid grid-cols-1 lg:grid-cols-2 h-full w-full gap-10">
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-r-lg transition-colors duration-300">
+                <div class="grid place-items-center h-full w-full">
+                    <div class=" text-center">
+                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ technologies_title }}</h1>
+                        <br>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ technologies_description }}</p>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white ">{{ technologies_list }}</p>
+                    </div>
+                    <div class=" text-center">
+                        <h1 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
+                        <br>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ about_description }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-10 lg:rounded-l-lg transition-colors duration-300">
+                <div class="grid place-items-center h-full w-full">
+                    <div class="text-center">
+                        <h1 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" class="text-6xl text-black dark:text-white">{{ about_title }}</h1>
+                        <br>
+                        <p data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" class="text-lg text-black dark:text-white">{{ about_description }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <br>
 </template>
