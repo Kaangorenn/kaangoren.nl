@@ -17,14 +17,14 @@ const toggleDarkMode = () => {
     mainStore.darkMode = !mainStore.darkMode;
     // Save to localStorage
     localStorage.setItem('darkMode', mainStore.darkMode.toString());
-    mainStore.applyDarkMode(); // Apply the dark mode
+    mainStore.applyDarkMode();
 };
 </script>
 <template>
-    <div class="w-screen bg-zinc-100 dark:bg-black">
+    <div class="w-screen bg-zinc-100 dark:bg-zinc-950">
         <div class="h-full w-full grid grid-cols-1 lg:grid-cols-3 place-items-center dark:text-white text-black">
             <div class="h-full w-full">
-                <div class="p-10 text-xl md:text-2xl">
+                <div class="p-10 text-xl md:text-2xl text-center">
                     <NuxtLink to="#home" class="hover:underline ease-in-out duration-300">home</NuxtLink>
                     <br>
                     <NuxtLink to="#about_me" class="hover:underline ease-in-out duration-300">about</NuxtLink>
@@ -34,8 +34,8 @@ const toggleDarkMode = () => {
                     <NuxtLink to="#contact" class="hover:underline ease-in-out duration-300">contact</NuxtLink>
                 </div>
             </div>
-            <div class="bg-blue-200 h-full w-full">
-                <div class="p-10 text-xl md:text-2xl">
+            <div class="h-full w-full">
+                <div class="p-10 text-xl md:text-2xl text-center">
                     <NuxtLink to="#home" class="hover:underline ease-in-out duration-300">home</NuxtLink>
                     <br>
                     <NuxtLink to="#about_me" class="hover:underline ease-in-out duration-300">about</NuxtLink>
@@ -45,9 +45,9 @@ const toggleDarkMode = () => {
                     <NuxtLink to="#contact" class="hover:underline ease-in-out duration-300">contact</NuxtLink>
                 </div>
             </div>
-            <div class="bg-green-200 h-full w-full">
-                <div class="p-10 text-xl md:text-2xl">
-                    <NuxtLink @click="toggleDarkMode" to="#about_me" class="hover:underline ease-in-out duration-300">toggle darkmode</NuxtLink>
+            <div class="h-full w-full">
+                <div class="p-10 text-xl md:text-2xl text-center">
+                    <NuxtLink @click="toggleDarkMode" class="hover:underline ease-in-out duration-300 cursor-pointer">toggle darkmode</NuxtLink>
                     <br>
                     <NuxtLink to="#about_me" class="hover:underline ease-in-out duration-300">about</NuxtLink>
                     <br>

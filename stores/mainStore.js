@@ -3,10 +3,10 @@ import { defineStore } from "pinia";
 export const useMainStore = defineStore('main', {
     state: () => {
         return {
-            site_settings: {
-                selected_language: "en",
-                darkmode: false,
-            },
+            // site_settings: {
+            //     selected_language: "en",
+            //     darkmode: false,
+            // },
             isHovered: false,
             darkMode: false,
             isLoading: false,
@@ -34,28 +34,28 @@ export const useMainStore = defineStore('main', {
                     },
                     about: {
                         about: {
-                            title: "About me",
-                            description: "hi! i'm a 21-year-old software development graduate from mbo college zuidoost. with a passion for technology, i've honed my skills in coding and creating innovative software solutions. when i'm not immersed in the world of development, you can find me indulging in my hobbies: listening to and making music, engaging in thrilling airsoft battles, and exploring the open road on my motorcycle. my diverse interests fuel my creativity and drive, both in my professional and personal life. welcome to my corner of the web!",
+                            title: "about me",
+                            description: "hi! i'm a 21-year-old software development graduate from mbo college zuidoost. with a passion for technology, i've honed my skills in coding and creating innovative software solutions. when i'm not immersed in the world of development, you can find me indulging in my hobbies: listening to and making music, engaging in thrilling airsoft battles, and exploring the open road on my motorcycle. my diverse interests fuel my creativity and drive, both in my professional and personal life.",
+                            description_2: "read further if you want to know which stack i use. i’ll provide a detailed overview of the technologies and tools that form the backbone of my development environment.",
+                            read_more_button: "read more",
                         },
                         technologies: {
-                            title: "technologies i use",
-                            description: "i have experience with a variety of programming languages, frameworks, and tools. here are some of the technologies i'm proficient in",
-                            list: [
-                                "html",
-                                "css",
-                                "javascript",
-                                "vue.js",
-                                "nuxt.js",
-                                "node.js",
-                                "php",
-                                "laravel",
-                                "mysql",
-                                "sqlite",
-                                "git",
-                                "Figma",
-                            ],
-                        
+                            title: "stack",
+                            description: "i am a versatile developer who leverages a variety of technologies to bring ideas to life. with proficiency in html, css, and javascript, i create dynamic and engaging web experiences. my expertise extends to modern frameworks like vue.js and nuxt.js, enhanced with pinia for state management, allowing me to build robust and efficient applications.",
+                            description_2: "on the backend, i utilize php, along with the laravel framework, to develop scalable and secure server-side solutions. my database skills include mysql and sqlite, ensuring data integrity and performance. i also use git for version control, figma for design, and tailwind and bootstrap for responsive, sleek ui design.",                        
                         },
+                    },
+                    portfolio: {
+                            title: "portfolio",
+                            description: "i have all my projects available on github, where you can explore my work in detail. you can check them out here. eventually, i will also be adding some of these projects to my website for easier access and a more curated presentation.",
+                            github_button: "view on github",
+                    },
+                    contact: {
+                        title: "contact",
+                        description: "if you have any questions or would like to get in touch, feel free to send me a message. i'm always open to new opportunities and collaborations, so don't hesitate to reach out!",
+                        email: "send me an email",
+                        linkedin: "connect on linkedin",
+                        github: "view my github",
                     },
                     footer: {
                         links: {

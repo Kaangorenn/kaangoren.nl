@@ -21,9 +21,9 @@ const goToWebsite = () => {
 };
 </script>
 <template>
-    <div class="bg-white/5 h-screen w-screen backdrop-blur-sm absolute">
+    <div class="bg-white/5 h-screen w-screen backdrop-blur-xl fixed">
         <div class="grid place-items-center h-full w-full">
-            <div class="bg-white rounded-lg scale-150">
+            <div class="bg-white rounded-lg shadow-lg">
                 <h1 class="text-center my-5 text-2xl font-semibold">preferences</h1>
                 <h1 class="mx-5">change website settings to your liking</h1>
                 <div class="bg-zinc-200 m-5 rounded-lg">
@@ -47,10 +47,10 @@ const goToWebsite = () => {
                     <div>
                         <ul class="p-5 pt-3 text-sm font-medium text-center rounded-lg sm:flex dark:divide-gray-700">
                             <li class="w-full focus-within:z-10">
-                                <a @click="selectDarkmode('dark')" :class="{ 'bg-yellow-400 text-zinc-800': selected_theme === 'dark' }" class="cursor-pointer inline-block w-full p-4 rounded-lg bg-green-800 text-white ease-in-out duration-300 group-">dark</a>
+                                <a @click="selectDarkmode('true')" :class="{ 'bg-yellow-400 text-zinc-800': selected_theme === 'true' }" class="cursor-pointer inline-block w-full p-4 rounded-lg bg-green-800 text-white ease-in-out duration-300 group-">dark</a>
                             </li>
                             <li class="w-full focus-within:z-10 my-1 sm:my-0 sm:ml-5">
-                                <a @click="selectLanguage('light')" :class="{ 'bg-yellow-400 text-zinc-800': selected_theme === 'light' }" class="cursor-pointer inline-block w-full p-4 rounded-lg bg-green-800 text-white ease-in-out duration-300">light</a>
+                                <a @click="selectLanguage('false')" :class="{ 'bg-yellow-400 text-zinc-800': selected_theme === 'false' }" class="cursor-pointer inline-block w-full p-4 rounded-lg bg-green-800 text-white ease-in-out duration-300">light</a>
                             </li>
                         </ul>
                     </div>
