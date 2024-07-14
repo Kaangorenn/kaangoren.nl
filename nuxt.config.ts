@@ -15,7 +15,15 @@ export default defineNuxtConfig({
     'nuxt-aos',
     "@nuxt/image",
     '@pinia/nuxt',
+    '@zadigetvoltaire/nuxt-gtm'
   ],
+  site: "https://www.kaangoren.nl",
+  gtm: {
+    id: 'GTM-P5Z9P6J3', // Your GTM single container ID, array of container ids ['GTM-xxxxxx', 'GTM-yyyyyy'] or array of objects [{id: 'GTM-xxxxxx', queryParams: { gtm_auth: 'abc123', gtm_preview: 'env-4', gtm_cookies_win: 'x'}}, {id: 'GTM-yyyyyy', queryParams: {gtm_auth: 'abc234', gtm_preview: 'env-5', gtm_cookies_win: 'x'}}], // Your GTM single container ID or array of container ids ['GTM-xxxxxx', 'GTM-yyyyyy']
+    enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
+    debug: true, // Whether or not display console logs debugs (optional)
+    loadScript: true,
+  },
   aos: {
     // Global settings:
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

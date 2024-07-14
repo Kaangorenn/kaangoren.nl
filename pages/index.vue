@@ -11,6 +11,7 @@ const job_title = mainStore.texts[mainStore.language].home.job_title;
 const about_title = mainStore.texts[mainStore.language].about.about.title;
 const about_description = mainStore.texts[mainStore.language].about.about.description;
 const about_description_2 = mainStore.texts[mainStore.language].about.about.description_2;
+const read_more_button = mainStore.texts[mainStore.language].about.about.read_more_button;
 
 //technologies
 const technologies_title = mainStore.texts[mainStore.language].about.technologies.title;
@@ -41,7 +42,7 @@ const portfolio_button = mainStore.texts[mainStore.language].portfolio.github_bu
     </section>
     <section id="about_me" class="min-h-screen w-screen text-white bg-white dark:bg-black transition-colors duration-300">
         <div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 h-full w-full gap-10 pt-24">
+            <div class="grid grid-cols-1 h-full w-full gap-10 pt-24">
                 <div class="p-10 transition-colors duration-300">
                     <div class="w-full h-full">
                         <div class="">
@@ -49,6 +50,13 @@ const portfolio_button = mainStore.texts[mainStore.language].portfolio.github_bu
                         </div>
                         <br>
                         <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="800" class="text-md lg:text-2xl 2xl:text-4xl text-black dark:text-white drop-shadow-lg dark:drop-shadow-none">{{ about_description }}</p>
+                        <br>
+                        <p data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-delay="800" class="text-md lg:text-2xl 2xl:text-4xl text-black dark:text-white drop-shadow-lg dark:drop-shadow-none">{{ about_description_2 }}</p>
+                        <br>
+                        <br>
+                        <div data-aos="fade-up">
+                            <NuxtLink data-aos-anchor-placement="bottom-bottom" to="https://github.com/Kaangorenn?tab=repositories" target="_blank" class="text-md bg-black p-5 lg:text-2xl 2xl:text-4xl text-white dark:text-black drop-shadow-lg dark:drop-shadow-none hover:text-">{{ read_more_button }}</NuxtLink>
+                        </div>
                     </div>
                 </div>
                 <div class="p-10 transition-colors duration-300">
@@ -61,12 +69,28 @@ const portfolio_button = mainStore.texts[mainStore.language].portfolio.github_bu
                         <p data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-delay="800" class="text-md lg:text-2xl 2xl:text-4xl text-black dark:text-white drop-shadow-lg dark:drop-shadow-none">{{ technologies_description }}</p>
                         <br>
                         <p data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1200" class="text-md lg:text-2xl 2xl:text-4xl text-black dark:text-white drop-shadow-lg dark:drop-shadow-none">{{ technologies_description_2 }}</p>
+                        <br>
+                        <br>
+                        <div class="grid grid-cols-3 gap-8 items-start">
+                            <div class="h-full w-full grid place-items-center rounded-lg">
+                                <NuxtImg data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1600" src="../public/icons/nuxt.png" class="p-5 h-32 w-44" />
+                            </div>
+                            <div class="h-full w-full grid place-items-center rounded-lg">
+                                <NuxtImg data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1600" src="../public/icons/laravel.png" class="p-5 h-32 w-32" />
+                            </div>
+                            <div class="h-full w-full grid place-items-center">
+                                <NuxtImg data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1600" src="../public/icons/tailwind.png" class="p-5 h-32 w-44" />
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
     </section>
-    <section id="portfolio" class="min-h-screen w-screen text-white bg-white dark:bg-black transition-colors duration-300">
+    <section id=" portfolio" class="min-h-screen w-screen text-white bg-white dark:bg-black transition-colors duration-300">
         <div>
             <div class="grid grid-cols-1 h-full w-full gap-10 pt-24">
                 <div class="p-10 transition-colors duration-300">

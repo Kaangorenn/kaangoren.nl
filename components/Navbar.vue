@@ -24,21 +24,25 @@ const toggleDarkMode = () => {
 </script>
 <template>
     <div data-aos="fade-down">
-        <div :class="{ 'text-black bg-black/5': mainStore.isHovered }" class="h-24 w-screen bg-black/5 dark:bg-zinc-950/50 backdrop-blur-lg fixed text-black dark:text-white z-40 shadow-lg">
-            <div class="grid place-items-center grid-cols-5 h-full w-full">
-                <NuxtLink @click="scrollToTop" to="/">
-                    <NuxtImg src="../public/white.png" class="p-5" />
-                </NuxtLink>
+        <div :class="{ 'text-black bg-black/5': mainStore.isHovered }" class="h-24 w-screen bg-black/5 dark:bg-zinc-950/50 backdrop-blur-lg fixed text-black dark:text-white z-40 shadow-sm">
+            <div class="grid place-items-center grid-cols-2 h-full w-full">
+                <div class="h-full w-full grid place-items-center relative">
+                    <div class="z-10 text-sm absolute left-3">
+                        <!-- <NuxtLink @click="scrollToTop" to="/" class="">
+                            <NuxtImg src="../public/white.png" class="h-24 p-8" />
+                        </NuxtLink> -->
+                    </div>
+                </div>
+
                 <!-- <NuxtLink to="#home" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 dark:hover:text-white/60 ease-in-out duration-300">home</NuxtLink>
                 <NuxtLink to="#about_me" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 dark:hover:text-white/60 ease-in-out duration-300">about me</NuxtLink>
                 <NuxtLink to="#portfolio" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 dark:hover:text-white/60 ease-in-out duration-300">portfolio</NuxtLink>
                 <NuxtLink to="#contact" class="text-xl md:text-2xl h-full w-full grid place-items-center hover:text-black/60 dark:hover:text-white/60 ease-in-out duration-300">contact</NuxtLink> -->
-                <div class="">
-                    <div class="fixed top-[30px] right-5 z-10 text-sm lg:hidden">
-                        <h1 v-if="!isMenuHidden" class="absolute right-10 top-2.5">Close</h1>
+                <div class="h-full w-full grid place-items-center relative">
+                    <div class="z-10 text-sm absolute right-8">
                         <button @click="toggleMenu" :class="['menuButton h-10 w-10', !isMenuHidden ? 'open' : '']" title="Open Menu">
-                            <hr class="mx-2 mb-2 border-[1px] border-black" />
-                            <hr class="mx-2 border-[1px] border-black" />
+                            <hr class="mx-2 mb-2 border-[1px] border-black dark:border-white" />
+                            <hr class="mx-2 border-[1px] border-black dark:border-white" />
                         </button>
                     </div>
                     <!-- <div class="grid grid-cols-2">
