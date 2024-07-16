@@ -47,7 +47,8 @@ export const useMainStore = defineStore('main', {
                     },
                     portfolio: {
                             title: "portfolio",
-                            description: "i have all my projects available on github, where you can explore my work in detail. you can check them out here. eventually, i will also be adding some of these projects to my website for easier access and a more curated presentation.",
+                        description: "this website is one of my projects. i have all my projects available on github, where you can explore my work in detail. you will find a diverse range of projects, each showcasing my skills and interests in various aspects of web development and programming. eventually, ",
+                            description_2: "i will also be adding some of these projects to my website for easier access and a more curated presentation. this way, you can not only view my code but also see the projects in action. stay tuned for more updates and feel free to explore my github in the meantime.",
                             github_button: "view on github",
                     },
                     contact: {
