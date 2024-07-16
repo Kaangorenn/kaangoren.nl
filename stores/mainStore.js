@@ -8,6 +8,7 @@ export const useMainStore = defineStore('main', {
             //     darkmode: false,
             // },
             isHovered: false,
+            isMenuHidden: true,
             darkMode: false,
             isLoading: false,
             language: "en",
@@ -149,7 +150,10 @@ export const useMainStore = defineStore('main', {
         },
         setLanguage(lang) {
             this.language = lang;
-        }
+        },
+        toggleMenu() {
+            this.isMenuHidden = !this.isMenuHidden;
+        },
     },
     getters: {
     },
