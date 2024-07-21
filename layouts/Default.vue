@@ -1,5 +1,5 @@
 <template>
-    <div class="noise"></div>
+    <!-- <div class="noise"></div> -->
     <div class="antialiased">
         <!-- <Preferences /> -->
         <Navbar />
