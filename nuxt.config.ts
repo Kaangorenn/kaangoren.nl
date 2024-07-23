@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     'nuxt-aos',
     "@nuxt/image",
     '@pinia/nuxt',
-    '@zadigetvoltaire/nuxt-gtm'
+    '@zadigetvoltaire/nuxt-gtm',
   ],
   // site: "https://www.kaangoren.nl",
   gtm: {

@@ -1,8 +1,9 @@
 <template>
-    <!-- <div class="noise"></div> -->
+    <div class="noise"></div>
     <div class="antialiased">
         <!-- <Preferences /> -->
-        <Navbar />
+        <!-- <Navbar /> -->
+        <Sidebar />
         <div class="">
             <slot />
         </div>
