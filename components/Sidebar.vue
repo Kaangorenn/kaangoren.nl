@@ -44,7 +44,11 @@ const scrollToTop = () => {
 };
 
 const closeMenu = () => {
-    mainStore.isMenuHidden = true;
+    if (window.innerWidth > 1024) {
+        mainStore.isMenuHidden = false;
+    } else {
+        mainStore.isMenuHidden = true;
+    }
 };
 
 const setLanguage = (language) => {
@@ -76,41 +80,42 @@ onMounted(() => {
                         <hr class="mx-2 mb-2 border-[1px] border-white" />
                         <hr class="mx-2 border-[1px] border-white" />
                     </button>
+                    <span v-if="!mainStore.isMenuHidden" class="text-white absolute mt-[10px] ml-[10px]">close</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- <div class="bg-red-200 grid grid-cols-5 lg:grid-rows-5 fixed right-0 h-screen w-screen lg:w-20 text-white mix-blend-difference z-40 "></div> -->
-    <div v-if="!mainStore.isMenuHidden" data-aos="fade-down" class="grid bg-black lg:bg-black fixed right-0 h-full w-screen lg:w-20 text-white z-40 lg:mix-blend-difference backdrop-blur-lg lg:backdrop-blur-none">
+    <div v-if="!mainStore.isMenuHidden" class="grid bg-black lg:bg-black fixed right-0 h-full w-screen lg:w-20 text-white z-40 lg:mix-blend-difference backdrop-blur-lg lg:backdrop-blur-none transition-all">
         <div class="grid grid-rows-7 lg:grid-rows-5 w-full h-full absolute pt-20 lg:pt-0">
 
             <div class="w-full h-full grid place-items-center">
-                <NuxtLink @click="closeMenu" to="#home" :class="{ 'border p-1': page === 'home' }" class="rotate-0 lg:-rotate-90">{{ home_navbar }}</NuxtLink>
+                <NuxtLink @click="closeMenu" to="#home" :class="{ 'underline': page === 'home' }" class="rotate-0 lg:-rotate-90">{{ home_navbar }}</NuxtLink>
             </div>
             <div class="w-full h-full grid place-items-center">
-                <NuxtLink @click="closeMenu" to="#about" :class="{ 'border p-1': page === 'about' }" class="rotate-0 lg:-rotate-90">{{ about_navbar }}</NuxtLink>
+                <NuxtLink @click="closeMenu" to="#about" :class="{ 'underline': page === 'about' }" class="rotate-0 lg:-rotate-90">{{ about_navbar }}</NuxtLink>
             </div>
             <div class="w-full h-full grid place-items-center">
-                <NuxtLink @click="closeMenu" to="#stack" :class="{ 'border p-1': page === 'stack' }" class="rotate-0 lg:-rotate-90">{{ stack_navbar }}</NuxtLink>
+                <NuxtLink @click="closeMenu" to="#stack" :class="{ 'underline': page === 'stack' }" class="rotate-0 lg:-rotate-90">{{ stack_navbar }}</NuxtLink>
             </div>
             <div class="w-full h-full grid place-items-center">
-                <NuxtLink @click="closeMenu" to="#portfolio" :class="{ 'border p-1': page === 'portfolio' }" class="rotate-0 lg:-rotate-90">{{ portfolio_navbar }}</NuxtLink>
+                <NuxtLink @click="closeMenu" to="#portfolio" :class="{ 'underline': page === 'portfolio' }" class="rotate-0 lg:-rotate-90">{{ portfolio_navbar }}</NuxtLink>
             </div>
             <div class="w-full h-full grid place-items-center">
-                <NuxtLink @click="closeMenu" to="#contact" :class="{ 'border p-1': page === 'contact' }" class="rotate-0 lg:-rotate-90">{{ contact_navbar }}</NuxtLink>
+                <NuxtLink @click="closeMenu" to="#contact" :class="{ 'underline': page === 'contact' }" class="rotate-0 lg:-rotate-90">{{ contact_navbar }}</NuxtLink>
             </div>
             <div class="lg:hidden">
                 <div class="w-full h-full grid place-items-center">
                     <div class="inline-flex gap-2">
                         <NuxtLink class="rotate-0 lg:-rotate-90 cursor-pointer">{{ language_selector_text }}:</NuxtLink>
                         <div>
-                            <NuxtLink @click="setLanguage('en')" :class="{ 'border p-1': selected_language === 'en' }" class="rotate-0 lg:-rotate-90 cursor-pointer">{{ english }}</NuxtLink>
+                            <NuxtLink @click="setLanguage('en')" :class="{ 'underline': selected_language === 'en' }" class="rotate-0 lg:-rotate-90 cursor-pointer">{{ english }}</NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink @click="setLanguage('nl')" :class="{ 'border p-1': selected_language === 'nl' }" class="rotate-0 lg:-rotate-90 cursor-pointer">{{ dutch }}</NuxtLink>
+                            <NuxtLink @click="setLanguage('nl')" :class="{ 'underline': selected_language === 'nl' }" class="rotate-0 lg:-rotate-90 cursor-pointer">{{ dutch }}</NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink @click="setLanguage('tr')" :class="{ 'border p-1': selected_language === 'tr' }" class="rotate-0 lg:-rotate-90 cursor-pointer">{{ turkish }}</NuxtLink>
+                            <NuxtLink @click="setLanguage('tr')" :class="{ 'underline': selected_language === 'tr' }" class="rotate-0 lg:-rotate-90 cursor-pointer">{{ turkish }}</NuxtLink>
                         </div>
                     </div>
                 </div>

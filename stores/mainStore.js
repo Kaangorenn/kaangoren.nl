@@ -11,6 +11,8 @@ export const useMainStore = defineStore('main', {
             isHovered: false,
             isMenuHidden: true,
             darkMode: false,
+            firstcolor: '',
+            secondcolor: '',
             isLoading: false,
             language: "en",
             texts: {
