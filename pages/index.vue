@@ -148,7 +148,7 @@ const contact_linkedin_button = computed(() => mainStore.texts[mainStore.languag
                 <br>
                 <br>
                 <div data-aos="fade-up" data-aos-delay="2000" class="mix-blend-difference">
-                    <NuxtLink to="#stack" class="text-sm lg:text-2xl 2xl:text-4xl text-black bg-white p-5 drop-shadow-lg dark:drop-shadow-none hover:text-white hover:bg-blue-700 transition-all duration-500">{{ technologies_button }}</NuxtLink>
+                    <NuxtLink to="#stack" class="text-sm lg:text-2xl 2xl:text-4xl text-black bg-white p-5 drop-shadow-lg dark:drop-shadow-none hover:bg-yellow-500 hover:text-black transition-all duration-500">{{ technologies_button }}</NuxtLink>
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@ const contact_linkedin_button = computed(() => mainStore.texts[mainStore.languag
                 <br>
                 <br>
                 <div data-aos="fade-up" data-aos-delay="2000" class="mix-blend-difference">
-                    <NuxtLink to="#stack" class="text-sm lg:text-2xl 2xl:text-4xl text-black bg-white p-5 drop-shadow-lg dark:drop-shadow-none">{{ portfolio_button }}</NuxtLink>
+                    <NuxtLink to="#stack" class="text-sm lg:text-2xl 2xl:text-4xl text-black bg-white p-5 drop-shadow-lg hover:bg-blue-700 dark:drop-shadow-none">{{ portfolio_button }}</NuxtLink>
                 </div>
             </div>
         </div>
